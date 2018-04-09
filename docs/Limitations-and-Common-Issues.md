@@ -1,19 +1,18 @@
-# Limitations and Common Issues 
+# Frequently Asked Questions
 
-## Unity SDK
-### Headless Mode
-If you enable Headless mode, you will not be able to collect visual 
-observations from your agents.
+## During Installation
 
-### Rendering Speed and Synchronization
-Currently the speed of the game physics can only be increased to 100x 
-real-time. The Academy also moves in time with FixedUpdate() rather than 
-Update(), so game behavior tied to frame updates may be out of sync. 
+### Scripting Runtime Environment not setup correctly
+
+If you hasn't switched your scripting runtime version from .NET 3.5 to .NET 4.6, you will see such error message:
+
+```
+Assets/ML-Agents/Scripts/ExternalCommunicator.cs(259,24): error CS1061: Type `System.Text.StringBuilder' does not contain a definition for `Clear' and no extension method `Clear' of type `System.Text.StringBuilder' could be found. Are you missing an assembly reference?
+```
+
+Refer to [here](Installation.md)
 
 ## Python API
-
-### Python version
-As of version 0.3, we no longer support Python 2. 
 
 ### Environment Permission Error
 
@@ -65,3 +64,22 @@ not terminating. In order to address this, set `Max Steps` for either
 the Academy or Agents within the Scene Inspector to a value greater 
 than 0. Alternatively, it is possible to manually set `done` conditions 
 for episodes from within scripts for custom episode-terminating events.
+
+
+# Limitations 
+
+## Unity SDK
+### Headless Mode
+If you enable Headless mode, you will not be able to collect visual 
+observations from your agents.
+
+### Rendering Speed and Synchronization
+Currently the speed of the game physics can only be increased to 100x 
+real-time. The Academy also moves in time with FixedUpdate() rather than 
+Update(), so game behavior tied to frame updates may be out of sync. 
+
+## Python API
+
+### Python version
+As of version 0.3, we no longer support Python 2. 
+

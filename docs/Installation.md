@@ -84,9 +84,15 @@ and run from the command line:
 If you'd like to use Docker for ML-Agents, please follow 
 [this guide](Using-Docker.md). 
 
+## Next Steps
+
+* For an overview of ML-Agents go [here](ML-Agents-Overview.md).
+* Get started with an example environment [here](ML-Agents-Overview.md).
+* Try building your own "Hello World" environment [here](Learning-Environment-Create-New.md).
+
 ## Help
 
-If you run into any problems installing ML-Agents, 
+If you run into any problems installing ML-Agents, refer to our [FAQ](Limitations-and-Common-Issues.md). If you can't find anything then
 [submit an issue](https://github.com/Unity-Technologies/ml-agents/issues) and
 make sure to cite relevant information on OS, Python version, and exact error 
 message (whenever possible). 
