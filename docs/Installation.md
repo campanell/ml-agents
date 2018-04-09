@@ -87,7 +87,7 @@ If you'd like to use Docker for ML-Agents, please follow
 ## Next Steps
 
 * For an overview of ML-Agents go [here](ML-Agents-Overview.md).
-* Get started with an example environment [here](ML-Agents-Overview.md).
+* Get started with an example environment [here](Getting-Started-with-Balance-Ball.md).
 * Try building your own "Hello World" environment [here](Learning-Environment-Create-New.md).
 
 ## Help
