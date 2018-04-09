@@ -1,9 +1,10 @@
 # Unity ML-Agents Documentation
 
-## Quick Start
+## Installation
  * [Installation & Set-up](Installation.md)
     * [Background: Jupyter Notebooks](Background-Jupyter.md)
-    * [Docker Set-up](Using-Docker.md)
+ * [Docker Set-up](Using-Docker.md)
+
 ## Getting Started
  * [ML-Agents Overview](ML-Agents-Overview.md)
     * [Background: Unity](Background-Unity.md)
