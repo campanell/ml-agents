@@ -1,6 +1,5 @@
 # Frequently Asked Questions
 
-## During Installation
 
 ### Scripting Runtime Environment not setup correctly
 
@@ -10,9 +9,27 @@ If you hasn't switched your scripting runtime version from .NET 3.5 to .NET 4.6,
 Assets/ML-Agents/Scripts/ExternalCommunicator.cs(259,24): error CS1061: Type `System.Text.StringBuilder' does not contain a definition for `Clear' and no extension method `Clear' of type `System.Text.StringBuilder' could be found. Are you missing an assembly reference?
 ```
 
-Refer to [here](Installation.md)
+This is because .NET 3.5 doesn't support method Clear() for StringBuilder, refer to [here](Installation.md#setting-up-ml-agent-within-unity) for solution. 
 
-## Python API
+### TensorflowSharp flag not turned on. 
+
+If you have already imported the TensorflowSharp plugin, but havn't set ENABLE_TENSORFLOW flag for your scripting define symbols, you will see the following error message:
+
+```
+You need to install and enable the TensorflowSharp plugin inorder to use the internal brain. 
+```
+
+This error message occurs because the TensorflowSharp plugin won't be usage without the ENABLE_TENSORFLOW flag, refer to [here](Installation.md#setting-up-ml-agent-within-unity) for solution. 
+
+### Tensorflow variable name error
+
+If you have some variables set in Unity and the Tensorflow side doesn't know about them, you will see some error like this:
+
+```
+UnityAgentsException: One of the Tensorflow placeholder could not be found. In brain Ball3DBrain, there are no FloatingPoint placeholder named epsilon. 
+```
+
+Solution: Go to all of your Brain object, find `Graph placeholders` and change its `size` to 0 to remove the `epsilon` placeholder. 
 
 ### Environment Permission Error
 
