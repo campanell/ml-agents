@@ -194,7 +194,7 @@ environment:
 within the ML-Agents project and click **Open**.
 4. In the `Project` window, navigate to the folder 
 `Assets/ML-Agents/Examples/3DBall/`.
-5. Double-click the `Scene` file to load the scene containing the Balance 
+5. Double-click the `3DBall` file to load the scene containing the Balance 
 Ball environment.
 
 ![3DBall Scene](images/mlagents-Open3DBall.png)
