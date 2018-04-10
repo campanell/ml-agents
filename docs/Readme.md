@@ -34,8 +34,9 @@
 
 ## Help
  * [Migrating to ML-Agents v0.3](Migrating-v0.3.md)
+ * [Frequently Asked Questions](FAQ.md)
  * [ML-Agents Glossary](Glossary.md)
- * [Limitations & Common Issues](Limitations-and-Common-Issues.md)
+ * [Limitations](Limitations.md)
  
 ## API Docs
  * [API Reference](API-Reference.md)

@@ -92,7 +92,7 @@ If you'd like to use Docker for ML-Agents, please follow
 
 ## Help
 
-If you run into any problems installing ML-Agents, refer to our [FAQ](Limitations-and-Common-Issues.md). If you can't find anything then
+If you run into any problems regarding ML-Agents, refer to our [FAQ](FAQ.md) and our [Limitations](Limitations.md) pages. If you can't find anything please
 [submit an issue](https://github.com/Unity-Technologies/ml-agents/issues) and
 make sure to cite relevant information on OS, Python version, and exact error 
 message (whenever possible). 
