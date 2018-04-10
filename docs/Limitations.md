@@ -14,3 +14,6 @@ Update(), so game behavior tied to frame updates may be out of sync.
 
 ### Python version
 As of version 0.3, we no longer support Python 2. 
+
+### Tensorflow support
+Currently Ml-Agents are using Tensorflow 1.4 due to the version of the TensorflowSharp plugin we are using. 
