@@ -185,64 +185,14 @@ step.
 
 ## Building the Environment
 
-The first step is to open the Unity scene containing the 3D Balance Ball
-environment:
-
-1. Launch Unity.
-2. On the Projects dialog, choose the **Open** option at the top of the window.
-3. Using the file dialog that opens, locate the `unity-environment` folder 
-within the ML-Agents project and click **Open**.
-4. In the `Project` window, navigate to the folder 
-`Assets/ML-Agents/Examples/3DBall/`.
-5. Double-click the `3DBall` file to load the scene containing the Balance 
-Ball environment.
-
-![3DBall Scene](images/mlagents-Open3DBall.png)
-
-Since we are going to build this environment to conduct training, we need to 
-set the brain used by the agents to **External**. This allows the agents to 
-communicate with the external training process when making their decisions.
-
-1. In the **Scene** window, click the triangle icon next to the Ball3DAcademy 
-object.
-2. Select its child object `Ball3DBrain`.
-3. In the Inspector window, set **Brain Type** to `External`.
-
-![Set Brain to External](images/mlagents-SetExternalBrain.png)
-
-Next, we want the set up scene to play correctly when the training process 
-launches our environment executable. This means:
-* The environment application runs in the background
-* No dialogs require interaction
-* The correct scene loads automatically
- 
-1. Open Player Settings (menu: **Edit** > **Project Settings** > **Player**).
-2. Under **Resolution and Presentation**:
-    - Ensure that **Run in Background** is Checked.
-    - Ensure that **Display Resolution Dialog** is set to Disabled.
-3. Open the Build Settings window (menu:**File** > **Build Settings**).
-4. Choose your target platform.
-    - (optional) Select “Development Build” to
-    [log debug messages](https://docs.unity3d.com/Manual/LogFiles.html).
-5. If any scenes are shown in the **Scenes in Build** list, make sure that 
-the 3DBall Scene is the only one checked. (If the list is empty, than only the 
-current scene is included in the build).
-6. Click *Build*:
-    a. In the File dialog, navigate to the `python` folder in your ML-Agents 
-    directory.
-    b. Assign a file name and click **Save**.
-
-![Build Window](images/mlagents-BuildWindow.png)
+To build the 3D Balance Ball environment, follow the steps in the
+[Building an Environment](Basic-Guides.md#building-an-environment) section 
+of the Basic Guides page.
 
 ## Training the Brain with Reinforcement Learning
 
 Now that we have a Unity executable containing the simulation environment, we 
-can perform the training. To first ensure that your environment and the Python 
-API work as expected, you can use the `python/Basics` 
-[Jupyter notebook](Background-Jupyter.md). 
-This notebook contains a simple walkthrough of the functionality of the API. 
-Within `Basics`, be sure to set `env_name` to the name of the environment file 
-you built earlier.
+can perform the training. 
 
 ### Training with PPO
 
@@ -313,6 +263,8 @@ during a successful training session.
 ![Example TensorBoard Run](images/mlagents-TensorBoard.png)
 
 ## Embedding the Trained Brain into the Unity Environment (Experimental)
+
+TODO - move this content to Basic Guides, add a link.
 
 Once the training process completes, and the training process saves the model 
 (denoted by the `Saved Model` message) you can add it to the Unity project and 
