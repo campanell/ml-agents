@@ -1,6 +1,14 @@
 # Basic Guides
 
-This guide shows you the a few basic steps you can try, like how to setup ML-Agents, how to playaround with our example environment and their associated pretrained model, how to control the Unity Environment with python API, how to do the training etc. 
+This guide shows you the basic steps you can try to playaround with ML-agents. 
+
+If you are not familiar with the [Unity Engine](https://unity3d.com/unity),
+we highly recommend the 
+[Unity Manual](https://docs.unity3d.com/Manual/index.html) and
+[Tutorials page](https://unity3d.com/learn/tutorials). The 
+[Roll-a-ball tutorial](https://unity3d.com/learn/tutorials/s/roll-ball-tutorial)
+is a fantastic resource to learn all the basic concepts of Unity to get started
+with ML-Agents: 
 
 ## Setting up ML-Agents within Unity
 
