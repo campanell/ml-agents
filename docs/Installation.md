@@ -62,7 +62,6 @@ The [Basic Guides](Basic-Guides.md) page contains several short
 tutorials on setting up ML-Agents within Unity, running a pre-trained model, in
 addition to building and training environments.
 
-
 ## Help
 
 If you run into any problems regarding ML-Agents, refer to our [FAQ](FAQ.md) and our [Limitations](Limitations.md) pages. If you can't find anything please
