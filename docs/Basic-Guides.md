@@ -101,7 +101,7 @@ The `python/Basics` [Jupyter notebook](Background-Jupyter.md) contains a
 simple walkthrough of the functionality of the Python 
 API. It can also serve as a simple test that your environment is configured
 correctly. Within `Basics`, be sure to set `env_name` to the name of the 
-environment file you built earlier.
+Unity executable you built earlier.
 
 More information and documentation is provided in the 
 [Python API](Python-API.md) page.
@@ -124,7 +124,7 @@ If the learn.py runs correctly and starts training, you should see something lik
 
 ![Training running](images/training-running.png)
 
-You can press Ctrl+c to stop the training at anytime, and your trained model will be at `ml-agents/python/models/<run-identifier>/<env_name>_<run-identifier>.bytes`. You can now embed this trained model into your internal brain by following the steps below, which is similar to the steps described [above](#play-an-example-environment-using-pretrained-model). 
+You can press Ctrl+C to stop the training at anytime, and your trained model will be at `ml-agents/python/models/<run-identifier>/<env_name>_<run-identifier>.bytes`. You can now embed this trained model into your internal brain by following the steps below, which is similar to the steps described [above](#play-an-example-environment-using-pretrained-model). 
 
 1. Move your model file into 
 `unity-environment/Assets/ML-Agents/Examples/3DBall/TFModels/`.

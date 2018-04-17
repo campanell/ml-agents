@@ -229,13 +229,13 @@ The `--train` flag tells ML-Agents to run in training mode. `env_name` should be
 
 ### Observing Training Progress
 
-Once you start training using `learn.py` in the way described in the previous section, the `ml-agents` folder will 
+Once you start training using `learn.py` in the way described in the previous section, the `ml-agents/python` folder will 
 contain a `summaries` directory. In order to observe the training process 
-in more detail, you can use TensorBoard. From the command line run:
+in more detail, you can use TensorBoard. From the command line navigate to `ml-agents/python` folder and run:
 
 `tensorboard --logdir=summaries`
 
-Then navigate to `localhost:6006`.
+Then navigate to `localhost:6006` in your browser.
 
 From TensorBoard, you will see the summary statistics:
 
