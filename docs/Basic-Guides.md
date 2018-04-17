@@ -3,12 +3,7 @@
 This guide shows you the basic steps you can try to playaround with ML-agents. 
 
 If you are not familiar with the [Unity Engine](https://unity3d.com/unity),
-we highly recommend the 
-[Unity Manual](https://docs.unity3d.com/Manual/index.html) and
-[Tutorials page](https://unity3d.com/learn/tutorials). The 
-[Roll-a-ball tutorial](https://unity3d.com/learn/tutorials/s/roll-ball-tutorial)
-is a fantastic resource to learn all the basic concepts of Unity to get started
-with ML-Agents: 
+we highly recommend the [Roll-a-ball tutorial](https://unity3d.com/learn/tutorials/s/roll-ball-tutorial) to learn all the basic concepts of Unity. 
 
 ## Setting up ML-Agents within Unity
 
