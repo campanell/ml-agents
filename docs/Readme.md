@@ -4,7 +4,7 @@
  * [Installation](Installation.md)
     * [Background: Jupyter Notebooks](Background-Jupyter.md)
  	* [Docker Set-up](Using-Docker.md)
- * [Basic Guides](Quick-Start-Guides.md)
+ * [Basic Guides](Basic-Guides.md)
 
 ## Getting Started
  * [ML-Agents Overview](ML-Agents-Overview.md)

@@ -58,7 +58,7 @@ If you'd like to use Docker for ML-Agents, please follow
 
 ## Next Steps
 
-The [Basic Guides](Quick-Start-Guides.md) page contains several short 
+The [Basic Guides](Basic-Guides.md) page contains several short 
 tutorials on setting up ML-Agents within Unity, running a pre-trained model, in
 addition to building and training environments.
 

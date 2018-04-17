@@ -217,14 +217,14 @@ for each training run. In other words, "BalanceBall1" for the first run,
 every training run are saved to the same directory and will all be included 
 on the same graph.
 
-To summarize, go to your command line, enter the `ml-agents` directory and type: 
+To summarize, go to your command line, enter the `ml-agents/python` directory and type: 
 
 ```python
-python3 python/learn.py <env_file_path> --run-id=<run-identifier> --train 
+python3 learn.py <env_name> --run-id=<run-identifier> --train 
 ```
 **Note**: If you're using Anaconda, don't forget to activate the ml-agents environment first.
 
-The `--train` flag tells ML-Agents to run in training mode. `env_file_path` should be the path to the Unity executable that was just created. 
+The `--train` flag tells ML-Agents to run in training mode. `env_name` should be the name of the Unity executable that was just created. 
 
 
 ### Observing Training Progress
@@ -264,8 +264,6 @@ during a successful training session.
 
 ## Embedding the Trained Brain into the Unity Environment (Experimental)
 
-TODO - move this content to Basic Guides, add a link.
-
 Once the training process completes, and the training process saves the model 
 (denoted by the `Saved Model` message) you can add it to the Unity project and 
 use it with agents having an **Internal** brain type.
@@ -277,38 +275,9 @@ Because TensorFlowSharp support is still experimental, it is disabled by
 default. In order to enable it, you must follow these steps. Please note that 
 the `Internal` Brain mode will only be available once completing these steps.
 
-1. Make sure the TensorFlowSharp plugin is in your `Assets` folder. A Plugins 
-folder which includes TF# can be downloaded 
-[here](https://s3.amazonaws.com/unity-ml-agents/0.3/TFSharpPlugin.unitypackage). 
-Double click and import it once downloaded.  You can see if this was
-successfully installed by checking the TensorFlow files in the Project tab
-under `Assets` -> `ML-Agents` -> `Plugins` -> `Computer`
-2. Go to `Edit` -> `Project Settings` -> `Player`
-3. For each of the platforms you target 
-(**`PC, Mac and Linux Standalone`**, **`iOS`** or **`Android`**):
-    1. Go into `Other Settings`.
-    2. Select `Scripting Runtime Version` to 
-    `Experimental (.NET 4.6 Equivalent)`
-    3. In `Scripting Defined Symbols`, add the flag `ENABLE_TENSORFLOW`. 
-    After typing in, press Enter.
-4. Go to `File` -> `Save Project`
-5. Restart the Unity Editor.
+To set up the TensorflowSharp Support, follow [Setting up ML-Agents within Unity](Basic-Guides.md#setting-up-ml-agents-within-unity) section and [Setting up TensorflowSharp Support](Basic-Guides.md#setting-up-tensorflowsharp-support) 
+of the Basic Guides page.
 
 ### Embedding the trained model into Unity
 
-1. The trained model is stored in `models/<run-identifier>` in the `ml-agents` folder. Once the 
-training is complete, there will be a `<env_name>.bytes` file in that location where `<env_name>` is the name 
-of the executable used during training. 
- 2. Move `<env_name>.bytes` from `python/models/ppo/` into 
-`unity-environment/Assets/ML-Agents/Examples/3DBall/TFModels/`.
-3. Open the Unity Editor, and select the `3DBall` scene as described above.
-4. Select the `Ball3DBrain` object from the Scene hierarchy.
-5. Change the `Type of Brain` to `Internal`.
-6. Drag the `<env_name>.bytes` file from the Project window of the Editor
-to the `Graph Model` placeholder in the `3DBallBrain` inspector window.
-7. Press the Play button at the top of the editor.
-
-If you followed these steps correctly, you should now see the trained model 
-being used to control the behavior of the balance ball within the Editor 
-itself. From here you can re-build the Unity binary, and run it standalone 
-with your agent's new learned behavior built right in.
+To embed the trained model into Unity, follow the later part of [Training the Brain with Reinforcement Learning](Basic-Guides.md#training-the-brain-with-reinforcement-learning) section of the Basic Buides page. 
