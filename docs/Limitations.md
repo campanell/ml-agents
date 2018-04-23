@@ -8,7 +8,7 @@ observations from your agents.
 ### Rendering Speed and Synchronization
 Currently the speed of the game physics can only be increased to 100x 
 real-time. The Academy also moves in time with FixedUpdate() rather than 
-Update(), so game behavior tied to frame updates may be out of sync. 
+Update(), so game behavior implemented in Update() may be out of sync with the Agent decision making. See [Execution Order of Event Functions](https://docs.unity3d.com/Manual/ExecutionOrder.html) for more information.
 
 ## Python API
 
@@ -16,4 +16,4 @@ Update(), so game behavior tied to frame updates may be out of sync.
 As of version 0.3, we no longer support Python 2. 
 
 ### Tensorflow support
-Currently Ml-Agents are using Tensorflow 1.4 due to the version of the TensorflowSharp plugin we are using. 
+Currently Ml-Agents uses TensorFlow 1.4 due to the version of the TensorFlowSharp plugin we are using. 

@@ -3,7 +3,7 @@
 ## Installation & Set-up
  * [Installation](Installation.md)
     * [Background: Jupyter Notebooks](Background-Jupyter.md)
- 	* [Docker Set-up](Using-Docker.md)
+    * [Docker Set-up](Using-Docker.md)
  * [Basic Guides](Basic-Guides.md)
 
 ## Getting Started

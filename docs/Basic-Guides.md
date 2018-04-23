@@ -1,6 +1,6 @@
 # Basic Guides
 
-This guide shows you the basic steps you can try to playaround with ML-agents. 
+This guide shows you the basic steps you can try to play around with ML-agents. 
 
 If you are not familiar with the [Unity Engine](https://unity3d.com/unity),
 we highly recommend the [Roll-a-ball tutorial](https://unity3d.com/learn/tutorials/s/roll-ball-tutorial) to learn all the basic concepts of Unity. 
@@ -15,19 +15,18 @@ we highly recommend the [Roll-a-ball tutorial](https://unity3d.com/learn/tutoria
     2. Select `Scripting Runtime Version` to 
     `Experimental (.NET 4.6 Equivalent)`
     3. In `Scripting Defined Symbols`, add the flag `ENABLE_TENSORFLOW`. 
-    After typing in, press Enter.
+    After typing in the flag name, press Enter.
 4. Go to `File` -> `Save Project`
-5. Restart the Unity Editor.
 
 ![Project Settings](images/project-settings.png)
 
-## Setting up TensorflowSharp Support
+## Setting up TensorFlowSharp Support
 
-[Download](https://s3.amazonaws.com/unity-ml-agents/0.3/TFSharpPlugin.unitypackage) TensorflowSharp plugin, and import it into Unity once downloaded by double clicking on it.  You can see if it was successfully imported by checking the TensorFlow files in the Project window under `Assets` -> `ML-Agents` -> `Plugins` -> `Computer`. 
+[Download](https://s3.amazonaws.com/unity-ml-agents/0.3/TFSharpPlugin.unitypackage) TensorFlowSharp plugin, and import it into Unity once downloaded by double clicking on it.  You can see if it was successfully imported by checking the TensorFlow files in the Project window under `Assets` -> `ML-Agents` -> `Plugins` -> `Computer`. 
 
 **Note**: If you don't see anything under `Assets`, drag the `ml-agents/unity-environment/Assets/ML-Agents` folder under `Assets` within Project window.
 
-![Imported Tensorflowsharp](images/imported-tensorflowsharp.png)
+![Imported TensorFlowsharp](images/imported-tensorflowsharp.png)
 
 ## Play an example environment using pretrained model
 

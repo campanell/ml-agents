@@ -3,7 +3,7 @@
 
 ### Scripting Runtime Environment not setup correctly
 
-If you hasn't switched your scripting runtime version from .NET 3.5 to .NET 4.6, you will see such error message:
+If you haven't switched your scripting runtime version from .NET 3.5 to .NET 4.6, you will see such error message:
 
 ```
 Assets/ML-Agents/Scripts/ExternalCommunicator.cs(259,24): error CS1061: Type `System.Text.StringBuilder' does not contain a definition for `Clear' and no extension method `Clear' of type `System.Text.StringBuilder' could be found. Are you missing an assembly reference?
@@ -23,13 +23,21 @@ This error message occurs because the TensorflowSharp plugin won't be usage with
 
 ### Tensorflow variable name error
 
-If you have some variables set in Unity and the Tensorflow side doesn't know about them, you will see some error like this:
+If you have a graph placeholder set in the internal Brain inspector that is not present in the TensorFlow graph, you will see some error like this:
 
 ```
 UnityAgentsException: One of the Tensorflow placeholder could not be found. In brain Ball3DBrain, there are no FloatingPoint placeholder named epsilon. 
 ```
 
 Solution: Go to all of your Brain object, find `Graph placeholders` and change its `size` to 0 to remove the `epsilon` placeholder. 
+
+Similarly, if you have a graph scope set in the internal Brain inspector that is not correctly set, you will see some error like this:
+
+```
+UnityAgentsException: The node <Wrong_Graph_Scope>/action could not be found. Please make sure the graphScope <Wrong_Graph_Scope>/ is correct
+```
+
+Solution: Make sure your Graph Scope field matches the corresponding brain object name in your Hierachy Inspector when there is multiple brain. 
 
 ### Environment Permission Error
 
