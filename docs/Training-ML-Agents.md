@@ -18,7 +18,7 @@ The basic command for training is:
 
     python3 learn.py <env_name> --run-id=<run-identifier> --train
 
-where `<env_name>` is the name of your Unity executable containing the agents to be trained and `<run-identifier>` is an optional identifier you can use to identify the results of individual training runs.
+where `<env_name>` is the name(including path) of your Unity executable containing the agents to be trained and `<run-identifier>` is an optional identifier you can use to identify the results of individual training runs.
 
 For example, suppose you have a project in Unity named "CatsOnBicycles" which contains agents ready to train. To perform the training:
 

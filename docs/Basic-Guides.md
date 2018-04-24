@@ -108,23 +108,30 @@ More information and documentation is provided in the
 
 ## Training the Brain with Reinforcement Learning
 
-Go to your command line, enter the `ml-agents/python` directory and type: 
+1. Open a command or terminal window. 
+2. Nagivate to the folder where you installed ML-Agents. 
+3. Change to the python directory. 
+4. Run `python3 learn.py <env_name> --run-id=<run-identifier> --train`
+Where:
+- `<env_name>` is the name and path to the executable you exported from Unity (without extension)
+- `<run-identifier>` is a string used to separate the results of different training runs
+- And the `--train` tells learn.py to run a training session (rather than inference)
+
+For example, if you are training with a 3DBall executable you exported to the ml-agents/python directory, run:
 
 ```
-python3 learn.py <env_name> --run-id=<run-identifier> --train 
+python3 learn.py 3DBall --run-id=firstRun --train
 ```
 
 ![Training command example](images/training-command-example.png)
 
 **Note**: If you're using Anaconda, don't forget to activate the ml-agents environment first.
 
-The `--train` flag tells ML-Agents to run in training mode. `env_name` should be the path to the Unity executable that was just created. 
-
 If the learn.py runs correctly and starts training, you should see something like this:
 
 ![Training running](images/training-running.png)
 
-You can press Ctrl+C to stop the training at anytime(when you think ), and your trained model will be at `ml-agents/python/models/<run-identifier>/<env_name>_<run-identifier>.bytes`. You can now embed this trained model into your internal brain by following the steps below, which is similar to the steps described [above](#play-an-example-environment-using-pretrained-model). 
+You can press Ctrl+C to stop the training, and your trained model will be at `ml-agents/python/models/<run-identifier>/<env_name>_<run-identifier>.bytes`, which corresponds to your model's latest checkpoint. You can now embed this trained model into your internal brain by following the steps below, which is similar to the steps described [above](#play-an-example-environment-using-pretrained-model). 
 
 1. Move your model file into 
 `unity-environment/Assets/ML-Agents/Examples/3DBall/TFModels/`.
