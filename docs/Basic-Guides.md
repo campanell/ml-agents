@@ -9,16 +9,18 @@ we highly recommend the [Roll-a-ball tutorial](https://unity3d.com/learn/tutoria
 
 In order to use ML-Agents within Unity, you need to change some Unity settings first. Also TensorflowSharp plugin is needed for you to use pretrained model within Unity. 
 
-1. Open Unity and use it to open folder `ml-agents/unity-environment`. 
-2. Go to **Edit** > **Project Settings** > **Player**
-3. For **each** of the platforms you target 
+1. Launch Unity
+2. On the Projects dialog, choose the **Open** option at the top of the window.
+3. Using the file dialog that opens, locate the `unity-environment` folder within the ML-Agents project and click **Open**.
+4. Go to **Edit** > **Project Settings** > **Player**
+5. For **each** of the platforms you target 
 (**PC, Mac and Linux Standalone**, **iOS** or **Android**):
     1. Option the **Other Settings** section.
     2. Select **Scripting Runtime Version** to 
     **Experimental (.NET 4.6 Equivalent)**
     3. In **Scripting Defined Symbols**, add the flag `ENABLE_TENSORFLOW`. 
     After typing in the flag name, press Enter.
-4. Go to **File** > **Save Project**
+6. Go to **File** > **Save Project**
 
 ![Project Settings](images/project-settings.png)
 
@@ -30,10 +32,10 @@ In order to use ML-Agents within Unity, you need to change some Unity settings f
 
 ## Running a Pre-trained Model
 
-1. In the Project window, go to `Assets/ML-Agents/Examples/3DBall` folder and open the `3DBall` scene file. 
-2. In the Hierarchy window, select the **Ball3DBrain** child under the **Ball3DAcademy** GameObject to view its properties in the Inspector window.
+1. In the **Project** window, go to `Assets/ML-Agents/Examples/3DBall` folder and open the `3DBall` scene file. 
+2. In the **Hierarchy** window, select the **Ball3DBrain** child under the **Ball3DAcademy** GameObject to view its properties in the Inspector window.
 3. On the **Ball3DBrain** object's **Brain** component, change the **Brain Type** to **Internal**.
-4. In the Project window, locate the `Assets/ML-Agents/Examples/3DBall/TFModels` folder.
+4. In the **Project** window, locate the `Assets/ML-Agents/Examples/3DBall/TFModels` folder.
 5. Drag the `3DBall` model file from the `TFModels` folder to the **Graph Model** field of the **Ball3DBrain** object's **Brain** component.
 5. Click the **Play** button and you will see the platforms balance the balls using the pretrained model.
 
