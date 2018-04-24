@@ -147,3 +147,4 @@ to the **Graph Model** placeholder in the **Ball3DBrain** inspector window.
 * For more information on ML-Agents, in addition to helpful background, check out the [ML-Agents Overview](ML-Agents-Overview.md) page.
 * For a more detailed walk-through of our 3D Balance Ball environment, check out the [Getting Started](Getting-Started-with-Balance-Ball.md) page.
 * For a "Hello World" introduction to creating your own learning environment, check out the [Making a New Learning Environment](Learning-Environment-Create-New.md) page.
+* For a series of Youtube video tutorials, checkout the [Machine Learning Agents PlayList](https://www.youtube.com/playlist?list=PLX2vGYjWbI0R08eWQkO7nQkGiicHAX7IX) page. 
