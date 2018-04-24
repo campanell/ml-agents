@@ -186,8 +186,8 @@ step.
 ## Building the Environment
 
 To build the 3D Balance Ball environment, follow the steps in the
-[Building an Environment](Basic-Guides.md#building-an-environment) section 
-of the Basic Guides page.
+[Building an Environment](Basic-Guide.md#building-an-environment) section 
+of the Basic Guide page.
 
 ## Training the Brain with Reinforcement Learning
 
@@ -275,9 +275,9 @@ Because TensorFlowSharp support is still experimental, it is disabled by
 default. In order to enable it, you must follow these steps. Please note that 
 the `Internal` Brain mode will only be available once completing these steps.
 
-To set up the TensorFlowSharp Support, follow [Setting up ML-Agents within Unity](Basic-Guides.md#setting-up-ml-agents-within-unity) section and [Setting up TensorFlowSharp Support](Basic-Guides.md#setting-up-tensorflowsharp-support) 
-of the Basic Guides page.
+To set up the TensorFlowSharp Support, follow [Setting up ML-Agents within Unity](Basic-Guide.md#setting-up-ml-agents-within-unity) section and [Setting up TensorFlowSharp Support](Basic-Guide.md#setting-up-tensorflowsharp-support) 
+of the Basic Guide page.
 
 ### Embedding the trained model into Unity
 
-To embed the trained model into Unity, follow the later part of [Training the Brain with Reinforcement Learning](Basic-Guides.md#training-the-brain-with-reinforcement-learning) section of the Basic Buides page. 
+To embed the trained model into Unity, follow the later part of [Training the Brain with Reinforcement Learning](Basic-Guide.md#training-the-brain-with-reinforcement-learning) section of the Basic Buides page. 
