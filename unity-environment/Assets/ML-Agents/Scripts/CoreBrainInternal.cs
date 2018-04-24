@@ -492,7 +492,7 @@ public class CoreBrainInternal : ScriptableObject, CoreBrain
 #endif
 #if !ENABLE_TENSORFLOW && UNITY_EDITOR
         EditorGUILayout.HelpBox (
-            "You need to install and enable the TensorFlowSharp plugin in"+ 
+            "You need to install and enable the TensorflowSharp plugin in"+ 
             "order to use the internal brain.", MessageType.Error);
         if (GUILayout.Button("Show me how"))
         {
