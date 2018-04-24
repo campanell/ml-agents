@@ -1,44 +1,45 @@
-# Basic Guides
+# Basic Guide
 
-This guide shows you the basic steps you can try to play around with ML-agents. 
+This guide will show you how to use a pretrained model in an example Unity environment, and show you how to train the model yourself.
 
 If you are not familiar with the [Unity Engine](https://unity3d.com/unity),
 we highly recommend the [Roll-a-ball tutorial](https://unity3d.com/learn/tutorials/s/roll-ball-tutorial) to learn all the basic concepts of Unity. 
 
 ## Setting up ML-Agents within Unity
 
+In order to use ML-Agents within Unity, you need to change some Unity settings first. Also TensorflowSharp plugin is needed for you to use pretrained model within Unity. 
+
 1. Open Unity and use it to open folder `ml-agents/unity-environment`. 
-2. Go to `Edit` -> `Project Settings` -> `Player`
+2. Go to **Edit** > **Project Settings** > **Player**
 3. For **each** of the platforms you target 
-(**`PC, Mac and Linux Standalone`**, **`iOS`** or **`Android`**):
-    1. Go into `Other Settings`.
-    2. Select `Scripting Runtime Version` to 
-    `Experimental (.NET 4.6 Equivalent)`
-    3. In `Scripting Defined Symbols`, add the flag `ENABLE_TENSORFLOW`. 
+(**PC, Mac and Linux Standalone**, **iOS** or **Android**):
+    1. Option the **Other Settings** section.
+    2. Select **Scripting Runtime Version** to 
+    **Experimental (.NET 4.6 Equivalent)**
+    3. In **Scripting Defined Symbols**, add the flag `ENABLE_TENSORFLOW`. 
     After typing in the flag name, press Enter.
-4. Go to `File` -> `Save Project`
+4. Go to **File** > **Save Project**
 
 ![Project Settings](images/project-settings.png)
 
-## Setting up TensorFlowSharp Support
+[Download](https://s3.amazonaws.com/unity-ml-agents/0.3/TFSharpPlugin.unitypackage) the TensorFlowSharp plugin. Then import it into Unity by double clicking the downloaded file.  You can check if it was successfully imported by checking the TensorFlow files in the Project window under **Assets** > **ML-Agents** > **Plugins** > **Computer**. 
 
-[Download](https://s3.amazonaws.com/unity-ml-agents/0.3/TFSharpPlugin.unitypackage) TensorFlowSharp plugin, and import it into Unity once downloaded by double clicking on it.  You can see if it was successfully imported by checking the TensorFlow files in the Project window under `Assets` -> `ML-Agents` -> `Plugins` -> `Computer`. 
-
-**Note**: If you don't see anything under `Assets`, drag the `ml-agents/unity-environment/Assets/ML-Agents` folder under `Assets` within Project window.
+**Note**: If you don't see anything under **Assets**, drag the `ml-agents/unity-environment/Assets/ML-Agents` folder under **Assets** within Project window.
 
 ![Imported TensorFlowsharp](images/imported-tensorflowsharp.png)
 
-## Play an example environment using pretrained model
+## Running a Pre-trained Model
 
-1. In the Project window, go to `Assets` -> `ML-Agents` -> `Examples` -> `3DBall` folder and open the `3DBall` scene file. 
-2. In the Hierarchy window, click on `Ball3DAcademy` -> `Ball3DBrain`. 
-3. In the Inspector window, under `Brain (Script)` -> `Brain Type`, change the `Brain Type` to `Internal`. 
-4. In the Project window, go to `Assets` -> `ML-Agents` -> `Examples` -> `3DBall` -> `TFModels` folder, drap the `3DBall` model file into Inspector window under `Brain (Script)` -> `Graph Model` if it is not already attached. 
-5. Click the `Play` button and you will see the platforms automatically adjusts itself using the pretrained model.
+1. In the Project window, go to `Assets/ML-Agents/Examples/3DBall` folder and open the `3DBall` scene file. 
+2. In the Hierarchy window, select the **Ball3DBrain** child under the **Ball3DAcademy** GameObject to view its properties in the Inspector window.
+3. On the **Ball3DBrain** object's **Brain** component, change the **Brain Type** to **Internal**.
+4. In the Project window, locate the `Assets/ML-Agents/Examples/3DBall/TFModels` folder.
+5. Drag the `3DBall` model file from the `TFModels` folder to the **Graph Model** field of the **Ball3DBrain** object's **Brain** component.
+5. Click the **Play** button and you will see the platforms balance the balls using the pretrained model.
 
 ![Running a pretrained model](images/running-a-pretrained-model.gif)
 
-## Building an Environment
+## Building an Example Environment
 
 The first step is to open the Unity scene containing the 3D Balance Ball
 environment:
@@ -47,7 +48,7 @@ environment:
 2. On the Projects dialog, choose the **Open** option at the top of the window.
 3. Using the file dialog that opens, locate the `unity-environment` folder 
 within the ML-Agents project and click **Open**.
-4. In the `Project` window, navigate to the folder 
+4. In the **Project** window, navigate to the folder 
 `Assets/ML-Agents/Examples/3DBall/`.
 5. Double-click the `3DBall` file to load the scene containing the Balance 
 Ball environment.
@@ -60,8 +61,8 @@ communicate with the external training process when making their decisions.
 
 1. In the **Scene** window, click the triangle icon next to the Ball3DAcademy 
 object.
-2. Select its child object `Ball3DBrain`.
-3. In the Inspector window, set **Brain Type** to `External`.
+2. Select its child object **Ball3DBrain**.
+3. In the Inspector window, set **Brain Type** to **External**.
 
 ![Set Brain to External](images/mlagents-SetExternalBrain.png)
 
@@ -82,7 +83,7 @@ launches our environment executable. This means:
 5. If any scenes are shown in the **Scenes in Build** list, make sure that 
 the 3DBall Scene is the only one checked. (If the list is empty, than only the 
 current scene is included in the build).
-6. Click *Build*:
+6. Click **Build**:
     a. In the File dialog, navigate to the `python` folder in your ML-Agents 
     directory.
     b. Assign a file name and click **Save**.
@@ -123,15 +124,15 @@ If the learn.py runs correctly and starts training, you should see something lik
 
 ![Training running](images/training-running.png)
 
-You can press Ctrl+C to stop the training at anytime, and your trained model will be at `ml-agents/python/models/<run-identifier>/<env_name>_<run-identifier>.bytes`. You can now embed this trained model into your internal brain by following the steps below, which is similar to the steps described [above](#play-an-example-environment-using-pretrained-model). 
+You can press Ctrl+C to stop the training at anytime(when you think ), and your trained model will be at `ml-agents/python/models/<run-identifier>/<env_name>_<run-identifier>.bytes`. You can now embed this trained model into your internal brain by following the steps below, which is similar to the steps described [above](#play-an-example-environment-using-pretrained-model). 
 
 1. Move your model file into 
 `unity-environment/Assets/ML-Agents/Examples/3DBall/TFModels/`.
-2. Open the Unity Editor, and select the `3DBall` scene as described above.
-3. Select the `Ball3DBrain` object from the Scene hierarchy.
-4. Change the `Type of Brain` to `Internal`.
+2. Open the Unity Editor, and select the **3DBall** scene as described above.
+3. Select the **Ball3DBrain** object from the Scene hierarchy.
+4. Change the **Type of Brain** to **Internal**.
 5. Drag the `<env_name>_<run-identifier>.bytes` file from the Project window of the Editor
-to the `Graph Model` placeholder in the `Ball3DBrain` inspector window.
+to the **Graph Model** placeholder in the **Ball3DBrain** inspector window.
 6. Press the Play button at the top of the editor.
 
 ## Next Steps

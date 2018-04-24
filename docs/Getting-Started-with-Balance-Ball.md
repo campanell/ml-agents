@@ -275,7 +275,7 @@ Because TensorFlowSharp support is still experimental, it is disabled by
 default. In order to enable it, you must follow these steps. Please note that 
 the `Internal` Brain mode will only be available once completing these steps.
 
-To set up the TensorflowSharp Support, follow [Setting up ML-Agents within Unity](Basic-Guides.md#setting-up-ml-agents-within-unity) section and [Setting up TensorflowSharp Support](Basic-Guides.md#setting-up-tensorflowsharp-support) 
+To set up the TensorFlowSharp Support, follow [Setting up ML-Agents within Unity](Basic-Guides.md#setting-up-ml-agents-within-unity) section and [Setting up TensorFlowSharp Support](Basic-Guides.md#setting-up-tensorflowsharp-support) 
 of the Basic Guides page.
 
 ### Embedding the trained model into Unity
