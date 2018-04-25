@@ -219,7 +219,7 @@ on the same graph.
 
 To summarize, go to your command line, enter the `ml-agents/python` directory and type: 
 
-```python
+```
 python3 learn.py <env_name> --run-id=<run-identifier> --train 
 ```
 **Note**: If you're using Anaconda, don't forget to activate the ml-agents environment first.

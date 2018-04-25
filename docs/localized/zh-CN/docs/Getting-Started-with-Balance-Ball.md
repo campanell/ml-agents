@@ -264,7 +264,7 @@ TensorBoard 来观测训练统计信息时，将每次训练的此项设置为�
 
 总之，转到命令行，进入 `ml-agents` 目录并输入：
 
-```python
+```
 python3 python/learn.py <env_name> --run-id=<run-identifier> --train 
 ```
 
